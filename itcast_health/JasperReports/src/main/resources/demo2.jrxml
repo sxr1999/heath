@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="demo2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c612f0c1-adf5-4c73-b20c-23c9e2c88084">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="company" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="name" class="java.lang.String"/>
+	<field name="code" class="java.lang.String"/>
+	<field name="sex" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="105" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="190" height="40" uuid="84786bfb-5b3e-4c32-8dc0-8571503392f2"/>
+				<imageExpression><![CDATA["http://www.itcast.cn/2018czgw/images/logo2.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="187" y="20" width="180" height="35" uuid="92161f3b-7976-4c97-a362-9b2b8905d7b8"/>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PDF报表测试]]></text>
+			</staticText>
+			<textField pattern="yyyy-MM-dd">
+				<reportElement x="440" y="40" width="130" height="45" uuid="d13b0fa2-7130-4d1a-8ed7-750f2fa29648"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="华文宋体" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="100" height="30" uuid="f3f76905-ee8f-43c4-bc4c-15139c9c4416">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9d3e53a-0e6c-4813-b2a3-7e440d69164d"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[套餐名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="c45c21eb-c739-4e8e-ad41-5036ebc2fa6e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="664e62e8-5e9a-400b-96ca-727770a7cfae"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[套餐编码]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="30" uuid="0a2b4bc8-d843-4050-bfdc-55c9927cb6a0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="da3002a1-878a-431e-a615-05f62ad2d6e0"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[适用性别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="30" uuid="1b4ecf6a-b18a-4be3-ad19-165ad996545b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c7682af4-4e58-42cf-bb35-e1a8d508516a"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[适用年龄]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="0" width="100" height="30" uuid="1940d718-c07d-4bbc-a660-ef72f95cc0a6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9d3e53a-0e6c-4813-b2a3-7e440d69164d"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="100" height="30" uuid="96da0adb-602b-4cbe-9278-4b41c99bfb2d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="664e62e8-5e9a-400b-96ca-727770a7cfae"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="30" uuid="5b225e3b-2f07-4b16-9bf2-7418c0a31fb4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="da3002a1-878a-431e-a615-05f62ad2d6e0"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="9d029677-b39b-4b32-aae5-66a4c08f004b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c7682af4-4e58-42cf-bb35-e1a8d508516a"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="华文宋体" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="72" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="58" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="20" width="100" height="30" uuid="e671d46c-8e91-494c-9741-79f8bfbc7306"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="华文宋体"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{company}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
